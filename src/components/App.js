@@ -14,10 +14,8 @@ class App extends React.Component {
       params: {query: term}
     });
     this.setState({images: response.data.results});
-    console.log(response.data.results);
   };
   render() {
-    console.log(`I am state: `, this.state.images);
     return (
       <div className='ui container' style={{marginTop: '30px'}}>
         <SearchBar onSubmit={this.onSearchSubmit} />
